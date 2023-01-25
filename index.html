@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>Générateur de plaisir</title>
+</head>
+
+<!-- item will be appened to this layout -->
+<div id="log" class="sl__chat__layout">
+</div>
+
+<body>
+    <div class="container">
+        <button class="btn" onclick="generatePseudo()">Découvre ta vraie nature</button>
+        <div class="row"></div>
+        <div id="result"></div>
+    </div>
+</body>
+
+
+<script>
+    function generatePseudo() {
+        var result = document.getElementById("result");
+        var name = [
+            "Le Sombre",
+            "La Bave",
+            "La Mort",
+            "La Fête",
+            "L'Angoisse",
+            "Le Tueur",
+            "Le Démon",
+            "Le Diable",
+            "Le Fou",
+            "Le Fouet",
+            "Le Vif",
+            "La Cloque",
+            "La Peste",
+            "La Cendre",
+            "Le Rempant",
+            "Le Fou-Furieux",
+            "La Sorcière",
+            "Le Vagabond",
+            "Le Désespoir",
+            "Le Mangeur",
+        ];
+
+
+
+        var randomName = name[Math.floor(Math.random() * name.length)];
+        var randomName2 = name[Math.floor(Math.random() * name.length)];
+        var randomName3 = name[Math.floor(Math.random() * name.length)];
+        result.innerHTML = randomName + " " + randomName2 + " " + randomName3;
+        result.classList.add("show"); /* Ajoute la classe show */
+    }
+
+</script>
+
+</html>
